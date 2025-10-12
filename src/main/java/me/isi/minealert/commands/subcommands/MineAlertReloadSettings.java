@@ -14,6 +14,6 @@ public class MineAlertReloadSettings extends SimpleSubCommand {
 	@Override
 	protected void onCommand() {
 		Settings.reload();
-		tell("Settings reloaded!");
+		tellSuccess("Settings reloaded!");
 	}
 }
