@@ -1,0 +1,96 @@
+# ================================================================
+# MineAlert - Main Configuration
+# ================================================================
+# Supports color codes using '&' and HEX colors using '#RRGGBB'.
+# ================================================================
+
+
+# ------------------------------------------------
+# PLUGIN PREFIX
+# ------------------------------------------------
+prefix: "&8[&cMineAlert&8]&7"
+
+# -------------------------------------------------------------------------------------------------
+# We support 'en' and 'it', but if you want to add your own language, create a file in localization/messages_yourlanguage.yml
+# -------------------------------------------------------------------------------------------------
+Locale: en
+
+# ------------------------------------------------
+# BLOCK SETTINGS
+# ------------------------------------------------
+# Blocks to track when broken by players.
+# Use valid Minecraft material names (UPPERCASE).
+# ------------------------------------------------
+blocks:
+  - DIAMOND_ORE
+  - DEEPSLATE_DIAMOND_ORE
+  - ANCIENT_DEBRIS
+
+# ------------------------------------------------
+# ALERT CONDITIONS
+# ------------------------------------------------
+# max-blocks: number of tracked blocks broken before an alert triggers.
+# time-window-ms: time (in milliseconds) in which the player must break
+# those blocks to trigger the alert.
+# ------------------------------------------------
+max-blocks: 10
+time-window-ms: 120000
+
+# ------------------------------------------------
+# PERMISSIONS
+# ------------------------------------------------
+alert-permission: "minealert.notify"
+bypass-permission: "minealert.bypass"
+
+# ------------------------------------------------
+# ALERT MESSAGE
+# ------------------------------------------------
+# Placeholders:
+# %player% - Player name
+# %block%  - Block name
+# %world%  - World name
+# ------------------------------------------------
+alert-msg: "&c[ALERT] &6%player% &chas found &6%block% &cin &6%world% &cduring a short period of time&7!"
+
+# ------------------------------------------------
+# COMMAND ALIASES
+# ------------------------------------------------
+command-aliases: [ minealert, mine, ma ]
+
+# ------------------------------------------------
+# CHECK LOGS COMMAND SETTINGS
+# ------------------------------------------------
+# Settings for /minealert checklogs <player>
+# ------------------------------------------------
+check-logs-command:
+  logs-to-show: 10
+
+  # Header and footer
+  header: "&8&m--------&r &6Logs for %player% &8&m--------"
+  footer: "&8&m----------------------------------------"
+
+  # Log entry format
+  # Placeholders:
+  # %block_type% - Block type (e.g., DIAMOND ORE)
+  # %date%       - Date and time (dd/MM/yyyy HH:mm:ss)
+  # %world%      - World name
+  # %x%, %y%, %z% - Block coordinates
+  entry-format: "&7- &f%block_type% &eat &b%date% &ein &7X:&f%x% &7Y:&f%y% &7Z:&f%z% &7(&a%world%&7)"
+
+  # Messages
+  no-logs-message: "&cNo logs found for %player%."
+  fetching-message: "&eFetching logs for %player%..."
+  player-not-found-message: "&cPlayer '%player%' not found."
+
+# ------------------------------------------------
+# DEBUG SETTINGS
+# ------------------------------------------------
+# Enable specific sections like: Debug: [alerts, tracking]
+# Leave empty for normal use.
+# ------------------------------------------------
+debug: [ ]
+
+# ------------------------------------------------
+# CONFIG VERSION, DO NOT MODIFY IT!
+# ------------------------------------------------
+version: 1

@@ -1,0 +1,29 @@
+# ------------------------------------------------------------------------------------------------------------
+# Database Settings
+# ------------------------------------------------------------------------------------------------------------
+# Enable or disable the database connection.
+enabled: true
+
+# Database type. Supported: 'mysql', 'mariadb', 'sqlite'.
+type: 'sqlite'
+
+# The database server address.
+host: '127.0.0.1'
+
+# The database server port (usually 3306 for MySQL/MariaDB).
+port: 3306
+
+# The name of the database to connect to.
+database: 'minealert'
+
+# The username for database access.
+user: 'root'
+
+# The password for database access.
+password: 'pass'
+
+# Optional settings for the JDBC driver.
+Options:
+  # Set this to true if you are connecting to MySQL 8+ and get a "Public Key Retrieval is not allowed" error.
+  # For most local or trusted database connections, this is safe to enable.
+  Allow_Public_Key_Retrieval: true

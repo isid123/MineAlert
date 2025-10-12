@@ -1,0 +1,187 @@
+# !-----------------------------------------------------------------------------------------------!
+#                              Benvenuto nel file di localizzazione.
+# !-----------------------------------------------------------------------------------------------!
+#
+#
+#   1) I CODICI COLORE sono supportati con il carattere '&'.
+#      - Per l'utilizzo, vedi http://minecraftwiki.net/wiki/Formatting_codes
+#      - Quando li usi, metti le virgolette attorno al messaggio in questo modo: "Ciao &cmondo."
+#       - Per usare i colori HEX, usa la sintassi #123456: "Ciao #123456mondo."
+#
+#   2) PER NASCONDERE qualsiasi messaggio, impostalo su 'none'.
+#
+#   3) JSON è supportato. Anteponi il messaggio con [JSON].
+#
+#   4) NOTA JAVASCRIPT: Alcuni dei nostri messaggi sono compilati just-in-time con JavaScript.
+#      Questi tipicamente contengono variabili come "self" al loro interno. SE NON SAI PROGRAMMARE
+#      in JavaScript, fai molta attenzione e non rimuovere le parentesi () o le variabili!
+#
+# !-----------------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi ai comandi
+# -------------------------------------------------------------------------------------------------
+Commands:
+  Error: "&4&lOups! &cIl comando è fallito :( Controlla la console e riporta l'errore."
+  Header_No_Subcommands: "&cNon ci sono argomenti per questo comando."
+  Header_No_Subcommands_Permission: "&cNon hai i permessi per visualizzare nessun sottocomando."
+  Header_Color: GOLD
+  Header_Secondary_Color: RED
+  Header_Format: "&r\n{theme_color}&m<center>&r{theme_color} {title} &m\n&r"
+  # Deve essere esattamente una lettera
+  Header_Center_Letter: "-"
+  Header_Center_Padding: 120
+  Reloading: "in ricaricamento"
+  Disabled: "disabilitato"
+  Use_While_Null: "&cNon è possibile usare questo comando mentre il plugin è {state}."
+  Cannot_Autodetect_World: "Solo i giocatori vivi possono usare ~ per il loro mondo!"
+  Incompatible: "Questo comando richiede Minecraft {0} o superiore."
+  Toggled_Plugin_Part: "'&7Non stai ' + (ignoring ? '&2più' : '&cancora') + ' &7ignorando {0}.'" # 'Stai' o 'Non stai' + 'più/ancora' + 'ignorando'
+  Use_Alternative_Header: false
+  Alternative_Header: "&c{plugin_name}: &7Digita '/{0} ?' per vedere tutti i comandi."
+  No_Console: "&cPuoi usare questo comando solo come giocatore."
+  No_BungeeCord: "Hai bisogno di BungeeCord abilitato per usare questa funzione."
+  Console_Missing_Player_Name: "Quando esegui da console, specifica il nome del giocatore."
+  Cooldown_Wait: "&cAttendi {duration} secondo/i prima di usare nuovamente questo comando."
+  Invalid_Argument: "&cArgomento non valido. Esegui &6/{label} ? &cper aiuto."
+  Invalid_Sub_Argument: "&cArgomento non valido. Esegui '/{label} {0}' per aiuto."
+  Invalid_Argument_Multiline: "&cArgomento non valido. Utilizzo:"
+  Invalid_Time: "Tempo atteso come '3 ore' o '15 minuti', ricevuto: '{input}'"
+  Invalid_Number: "Il numero deve essere intero o decimale. Ricevuto: '{input}'"
+  Invalid_String: "&cStringa non valida. Ricevuto: '{input}&c'"
+  Invalid_World: "Mondo '{world}' non valido. Disponibili: {available}"
+  Label_Authors: "Creato da"
+  Label_Description: "&c&lDescrizione:"
+  Label_Optional_Args: "argomenti opzionali"
+  Label_Required_Args: "argomenti richiesti"
+  Label_Usage: "&c&lUtilizzo:"
+  Label_Help_For: "Aiuto per /{label}"
+  Label_Subcommand_Description: " &f/{label} {sublabel} {usage+}{dash+}{description}"
+  Help_Tooltip_Description: "&7Descrizione: &f{description}"
+  Help_Tooltip_Permission: "&7Permesso: &f{permission}"
+  Help_Tooltip_Usage: "&7Utilizzo: &f"
+  Reload_Description: "Ricarica la configurazione."
+  Reload_Started: "Ricaricamento dei dati del plugin, attendi per favore.."
+  Reload_Success: "&6{plugin_name} {plugin_version} è stato ricaricato."
+  Reload_Fail: "&4Oups, &cil ricaricamento è fallito! Vedi la console per maggiori informazioni. Errore: {error}"
+  Reload_File_Load_Error: "&4Oups, &cci è stato un problema nel caricamento dei file dal tuo disco! Vedi la console per maggiori informazioni. {plugin_name} non è stato ricaricato."
+  Debug_Description: "Zippa le tue impostazioni per la segnalazione di bug."
+  Debug_Preparing: "&6Preparazione del log di debug..."
+  Debug_Success: "&2Copiati con successo {amount} file in debug.zip. Le tue informazioni MySQL sensibili sono state rimosse dai file yml. Caricalo via ufile.io e inviacelo per la revisione."
+  Debug_Copy_Fail: "&cLa copia dei file è fallita sul file {file} ed è stata interrotta. Vedi la console per maggiori informazioni."
+  Debug_Zip_Fail: "&cLa creazione di uno ZIP dei tuoi file è fallita, vedi la console per maggiori informazioni. Zippa manualmente la cartella debug/ e inviacela via ufile.io."
+  Perms_Description: "Elenca tutti i permessi del plugin."
+  Perms_Usage:
+  Perms_Header: "Elenco di tutti i permessi del plugin"
+  Perms_Main: "Principale"
+  Perms_Permissions: "Permessi:"
+  Perms_True_By_Default: "&7[vero di default]"
+  Perms_Info: "&7Info: &f"
+  Perms_Default: "&7Default? "
+  Perms_Applied: "&7Ce l'hai? "
+  Perms_Yes: "&2sì"
+  Perms_No: "&cno"
+  Region_Set_Primary: "Imposta il punto primario della regione."
+  Region_Set_Secondary: "Imposta il punto secondario della regione."
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi al paginatore che divide l'aiuto del comando in più pagine
+# -------------------------------------------------------------------------------------------------
+Pages:
+  No_Page_Number: "&cSpecifica il numero di pagina per questo comando."
+  No_Pages: "&cNon hai pagine salvate da mostrare."
+  No_Page: "Le pagine non contengono il numero di pagina fornito."
+  Invalid_Page: "&cIl tuo input '{input}' non è un numero valido."
+  Go_To_Page: "&7Vai alla pagina {page}"
+  Go_To_First_Page: "&7Vai alla prima pagina"
+  Tooltip:
+    - "&7Puoi anche navigare usando il"
+    - "&7comando nascosto '/#flp <pagina>.'"
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi ai giocatori
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: "&cIl giocatore {player} &cnon è online su questo server."
+  Not_Played_Before: "&cIl giocatore {player} &cnon ha mai giocato prima o non siamo riusciti a localizzare i suoi dati su disco."
+  Invalid_UUID: "&cNon è stato possibile trovare un giocatore dall'UUID {uuid}."
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi ai menu
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Cannot_Open_During_Conversation: "&cDigita 'exit' per uscire dalla conversazione prima di aprire il menu."
+  Item_Deleted: "&2L'oggetto {item} è stato eliminato."
+  Error: "&cOups! C'è stato un problema con questo menu! Contatta l'amministratore per controllare la console per i dettagli."
+  Page_Previous: "&8<< &fPagina {page}"
+  Page_Next: "Pagina {page} &8>>"
+  Page_First: "&7Prima Pagina"
+  Page_Last: "&7Ultima Pagina"
+  Title_Tools: "Menu Strumenti"
+  Tooltip_Info: "&fInformazioni Menu"
+  Button_Return_Title: "&4&lTorna Indietro"
+  Button_Return_Lore:
+    - ""
+    - "Torna indietro."
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi alla conversazione del giocatore in cui il server attende il suo input in chat
+# -------------------------------------------------------------------------------------------------
+Conversation:
+  Not_Conversing: "&cPuoi usare questo comando solo quando ti viene chiesto di digitare qualcosa in chat."
+  Requires_Player: "Solo i giocatori possono entrare in questa conversazione."
+  Error: "&cOups! C'è stato un problema in questa conversazione! Contatta l'amministratore per controllare la console per i dettagli."
+  Conversation_Cancelled: "La tua risposta in chat in sospeso è stata annullata."
+  Conversation_Cancelled_Inactive: "La tua risposta in chat in sospeso è stata annullata perché eri inattivo."
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi agli strumenti
+# -------------------------------------------------------------------------------------------------
+Tool:
+  Error: "&cOups! C'è stato un problema con questo strumento! Contatta l'amministratore per controllare la console per i dettagli."
+
+# -------------------------------------------------------------------------------------------------
+# Parole sia per la forma singolare che plurale. Separare queste due forme con ", "
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: secondo, secondi
+  Minute: minuto, minuti
+  Hour: ora, ore
+  Day: giorno, giorni
+  Week: settimana, settimane
+  Month: mese, mesi
+  Year: anno, anni
+
+# -------------------------------------------------------------------------------------------------
+# Diversi prefissi che puoi usare chiamando {prefix_<type>} come {prefix_info}
+# -------------------------------------------------------------------------------------------------
+Prefix:
+  Info: "&8&l[&9&li&8&l]&7"
+  Success: "&8&l[&2&l!&8&l]&7"
+  Warn: "&8&l[&6&l!&8&l]&6"
+  Error: "&8&l[&4&lX&8&l]&c"
+  Question: "&8&l[&a&l?&8&l]&7"
+  Announce: "&8&l[&5&l!&8&l]&d"
+
+# -------------------------------------------------------------------------------------------------
+# Varie
+# -------------------------------------------------------------------------------------------------
+None: "Nessuno"
+Server_Prefix: "[Server]"
+Console_Name: "Console"
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi relativi al database
+# -------------------------------------------------------------------------------------------------
+Data_Missing: "&c{name} non ha informazioni sul database! Crea {type} solo in gioco! Salto.."
+Data_Loading: "Il database sta attualmente caricando i dati, attendi per favore..."
+
+# -------------------------------------------------------------------------------------------------
+# Messaggi mostrati quando un giocatore esegue un comando per cui non ha il permesso
+# -------------------------------------------------------------------------------------------------
+No_Permission: "&cNessun permesso: {permission}"
+
+# -------------------------------------------------------------------------------------------------
+# Numero di versione interno
+# -------------------------------------------------------------------------------------------------
+Version: 1
