@@ -6,8 +6,11 @@ import me.isi.minealert.managers.AlertManager;
 import me.isi.minealert.managers.DatabaseManager;
 import me.isi.minealert.managers.PlayerManager;
 import me.isi.minealert.services.BlockTrackingService;
+import org.bukkit.entity.Player;
 import org.mineacademy.fo.Common;
+import org.mineacademy.fo.model.SpigotUpdater;
 import org.mineacademy.fo.plugin.SimplePlugin;
+import org.mineacademy.fo.remain.Remain;
 
 @Getter
 public final class MineAlert extends SimplePlugin {
@@ -35,32 +38,30 @@ public final class MineAlert extends SimplePlugin {
 		registerEvents(new BlockBreakListener(blockTrackingService, playerManager));
 	}
 
+	@Override
+	public SpigotUpdater getUpdateCheck() {
+		int resourceId = 129462;
+		boolean autoDownload = false;
 
-//	@Override
-//	public SpigotUpdater getUpdateCheck() {
-//		int resourceId = 00000; //TODO to change
-//		boolean autoDownload = false;
-//
-//		return new SpigotUpdater(resourceId, autoDownload) {
-//			@Override
-//			public void run() {
-//				super.run();
-//
-//				if (this.isNewVersionAvailable()) {
-//					String latest = this.getNewVersion();
-//
-//					Common.log("New version avaiable: &e" + latest);
-//
-//					for (Player player : Remain.getOnlinePlayers()) {
-//						if (player.hasPermission("plugin.update.notify")) {
-//							player.sendMessage(Common.colorize("New version avaiable: &e" + latest));
-//						}
-//					}
-//				}
-//			}
-//		};
-//	}
+		return new SpigotUpdater(resourceId, autoDownload) {
+			@Override
+			public void run() {
+				super.run();
 
+				if (this.isNewVersionAvailable()) {
+					String latest = this.getNewVersion();
+
+					Common.log("New version avaiable: &e" + latest);
+
+					for (Player player : Remain.getOnlinePlayers()) {
+						if (player.hasPermission("plugin.update.notify")) {
+							player.sendMessage(Common.colorize("New version avaiable: &e" + latest));
+						}
+					}
+				}
+			}
+		};
+	}
 
 	@Override
 	public int getMetricsPluginId() {
