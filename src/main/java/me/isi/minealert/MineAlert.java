@@ -35,6 +35,11 @@ public final class MineAlert extends SimplePlugin {
 	}
 
 	@Override
+	public int getMetricsPluginId() {
+		return 27570;
+	}
+
+	@Override
 	protected void onPluginStop() {
 		DatabaseManager.getInstance().disconnect();
 	}
