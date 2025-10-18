@@ -27,7 +27,7 @@ All commands are executed using the primary alias `/minealert` (or the shortened
 | Command | Description | Required Permission                               |
 | :--- | :--- |:--------------------------------------------------|
 | `/minealert ?` | Shows a list of all available commands for which the player has permission. | *Requires permission for at least one subcommand* |
-| `/minealert recentlogs [player]` | Displays a comprehensive log of a player's mining statistics and recorded cheating infractions. | `minealert.command.recentlogs`                    |
+| `/minealert recentlogs <player>` | Displays a comprehensive log of a player's mining statistics and recorded cheating infractions. | `minealert.command.recentlogs`                    |
 | `/minealert checklogs <player>` | **Opens a GUI** to display a more detailed and interactive view of the player's mining statistics and infractions. | `minealert.command.checklogs`                     |
 | `/minealert reload` | Reloads the plugin's configuration file (`settings.yml`) without restarting the server. | `minealert.command.reload`                        |
 
