@@ -6,6 +6,7 @@ import me.isi.minealert.settings.Settings;
 import org.bukkit.OfflinePlayer;
 import org.mineacademy.fo.Common;
 import org.mineacademy.fo.command.SimpleSubCommand;
+import org.mineacademy.fo.settings.SimpleLocalization;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -15,7 +16,7 @@ public class MineAlertRecentLogs extends SimpleSubCommand {
 
 
 	public MineAlertRecentLogs() {
-		super("recentlogs|checklogs");
+		super("recentlogs");
 		setDescription("Check player latest logs");
 		setMinArguments(1);
 		setUsage("<player>");
@@ -28,7 +29,7 @@ public class MineAlertRecentLogs extends SimpleSubCommand {
 		OfflinePlayer targetPlayer = findPlayer(playerName);
 
 		if (targetPlayer == null) {
-			tellError(Settings.recentLogs.PLAYER_NOT_FOUND_MESSAGE.replace("%player%", playerName));
+			tellError(SimpleLocalization.Player.NOT_ONLINE);
 			return;
 		}
 

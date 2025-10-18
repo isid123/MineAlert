@@ -6,6 +6,7 @@ import org.mineacademy.fo.Common;
 import org.mineacademy.fo.settings.YamlStaticConfig;
 
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.Set;
 
 
@@ -27,11 +28,10 @@ public final class Settings extends YamlStaticConfig {
 		public static String FOOTER;
 		public static String NO_LOGS_MESSAGE;
 		public static String FETCHING_MESSAGE;
-		public static String PLAYER_NOT_FOUND_MESSAGE;
 
 
 		private static void init() {
-			setPathPrefix("check-logs-command");
+			setPathPrefix("recent-logs-command");
 
 			LOGS_TO_SHOW = getInteger("logs-to-show");
 			HEADER = Common.colorize(getString("header"));
@@ -39,9 +39,46 @@ public final class Settings extends YamlStaticConfig {
 			FOOTER = Common.colorize(getString("footer"));
 			NO_LOGS_MESSAGE = Common.colorize(getString("no-logs-message"));
 			FETCHING_MESSAGE = Common.colorize(getString("fetching-message"));
-			PLAYER_NOT_FOUND_MESSAGE = Common.colorize(getString("player-not-found-message"));
 		}
 
+		public final static class messages {
+
+
+			private static void init() {
+			}
+		}
+
+	}
+
+	public static final class CheckLogsMenu {
+		public static String TITLE;
+
+		public static final class PlayerInfoItem {
+			public static String NAME;
+			public static List<String> LORE;
+		}
+
+		public static final class StatisticsItem {
+			public static String NAME;
+			public static List<String> LORE_HEADER;
+			public static String TOP_BLOCK_ENTRY_FORMAT;
+			public static String NO_DATA_MESSAGE;
+		}
+
+		private static void init() {
+			setPathPrefix("check-logs-menu");
+			TITLE = getString("title");
+
+			setPathPrefix("check-logs-menu.player-info-item");
+			PlayerInfoItem.NAME = getString("name");
+			PlayerInfoItem.LORE = getStringList("lore");
+
+			setPathPrefix("check-logs-menu.statistics-item");
+			StatisticsItem.NAME = getString("name");
+			StatisticsItem.LORE_HEADER = getStringList("lore-header");
+			StatisticsItem.TOP_BLOCK_ENTRY_FORMAT = getString("top-block-entry-format");
+			StatisticsItem.NO_DATA_MESSAGE = getString("no-data-message");
+		}
 	}
 
 

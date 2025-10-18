@@ -62,7 +62,7 @@ command-aliases: [ minealert, mine, ma ]
 # ------------------------------------------------
 # Settings for /minealert checklogs <player>
 # ------------------------------------------------
-check-logs-command:
+recent-logs-command:
   logs-to-show: 10
 
   # Header and footer
@@ -80,7 +80,30 @@ check-logs-command:
   # Messages
   no-logs-message: "&cNo logs found for %player%."
   fetching-message: "&eFetching logs for %player%..."
-  player-not-found-message: "&cPlayer '%player%' not found."
+
+# ------------------------------------------------
+# CHECK LOGS MENU SETTINGS
+# ------------------------------------------------
+check-logs-menu:
+  title: "&bChecklogs: %player%"
+
+  player-info-item:
+    name: "&e%player% &7(%online_status%&7)"
+    lore:
+      - "&bName: &f%player%"
+      - "&bPlaytime: &f%playtime%"
+      - ""
+      - "Click to teleport"
+
+  statistics-item:
+    name: "&eMining Statistics"
+    lore-header:
+      - "&bFavorite World: &f%favorite_world%"
+      - ""
+      - "&bTop 3 Blocks Mined:"
+    top-block-entry-format: " &f%rank%. &e%block_name% &7(&f%count%&7, &c%percentage%&7)"
+    no-data-message: " &7No data available."
+
 
 # ------------------------------------------------
 # DEBUG SETTINGS

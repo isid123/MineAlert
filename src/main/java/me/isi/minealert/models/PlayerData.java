@@ -1,4 +1,4 @@
-package me.isi.minealert.settings;
+package me.isi.minealert.models;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -11,6 +11,7 @@ import org.mineacademy.fo.Common;
 import org.mineacademy.fo.model.SpigotUpdater;
 import org.mineacademy.fo.plugin.SimplePlugin;
 import org.mineacademy.fo.remain.Remain;
+import org.mineacademy.fo.settings.SimpleLocalization;
 
 @Getter
 public final class MineAlert extends SimplePlugin {
@@ -51,7 +52,7 @@ public final class MineAlert extends SimplePlugin {
 				if (this.isNewVersionAvailable()) {
 					String latest = this.getNewVersion();
 
-					Common.log("New version avaiable: &e" + latest);
+					Common.log(SimpleLocalization.Update.AVAILABLE);
 
 					for (Player player : Remain.getOnlinePlayers()) {
 						if (player.hasPermission("plugin.update.notify")) {

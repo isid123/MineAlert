@@ -1,7 +1,7 @@
 package me.isi.minealert.managers;
 
 import lombok.Getter;
-import me.isi.minealert.settings.PlayerData;
+import me.isi.minealert.models.PlayerData;
 
 import java.util.HashMap;
 import java.util.UUID;

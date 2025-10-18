@@ -3,7 +3,7 @@ package me.isi.minealert.services;
 import me.isi.minealert.database.Database;
 import me.isi.minealert.managers.AlertManager;
 import me.isi.minealert.managers.PlayerManager;
-import me.isi.minealert.settings.PlayerData;
+import me.isi.minealert.models.PlayerData;
 import me.isi.minealert.settings.Settings;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -22,6 +22,7 @@ public class BlockTrackingService {
 	public void HandleBreakBlock(Player player, Material blockType, Location location){
 
 		Database.getInstance().saveNewLog(player, location, blockType);
+		Database.getInstance().incrementBlockBreak(player, blockType);
 
 		PlayerData data = playerManager.getOrCreate(player.getUniqueId(), player.getName());
 		long now = System.currentTimeMillis();

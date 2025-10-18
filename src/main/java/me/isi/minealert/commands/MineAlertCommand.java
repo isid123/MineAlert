@@ -1,5 +1,6 @@
 package me.isi.minealert.commands;
 
+import me.isi.minealert.commands.subcommands.MineAlertCheckLogs;
 import me.isi.minealert.commands.subcommands.MineAlertRecentLogs;
 import me.isi.minealert.commands.subcommands.MineAlertReloadSettings;
 import org.mineacademy.fo.annotation.AutoRegister;
@@ -15,6 +16,7 @@ public final class MineAlertCommand extends SimpleCommandGroup {
 	protected void registerSubcommands() {
 		registerSubcommand(new MineAlertReloadSettings(this));
 		registerSubcommand(new MineAlertRecentLogs());
+		registerSubcommand(new MineAlertCheckLogs());
 	}
 
 	@Override
